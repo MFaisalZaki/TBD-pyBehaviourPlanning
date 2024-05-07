@@ -2,7 +2,7 @@ import json
 
 
 
-from bss.shortcuts import GoalPredicatesOrdering, MakespanOptimalCostBound, ResourceCount
+from behaviour_planning_smt.shortcuts import GoalPredicatesOrdering, MakespanOptimalCostBound, ResourceCount
 
 def process_args(args):
 

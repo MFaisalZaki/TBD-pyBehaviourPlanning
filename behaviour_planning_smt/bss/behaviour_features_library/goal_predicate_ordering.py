@@ -4,7 +4,7 @@ import z3
 from z3 import ModelRef
 from unified_planning.plans import SequentialPlan
 
-from bss.behaviour_features_library.base import DimensionConstructor
+from behaviour_planning_smt.bss.behaviour_features_library.base import DimensionConstructor
 
 class GoalPredicatesOrdering(DimensionConstructor):
     

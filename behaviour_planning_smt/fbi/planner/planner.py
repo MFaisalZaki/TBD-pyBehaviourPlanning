@@ -10,7 +10,7 @@ import up_symk
 
 import z3
 
-from bss.shortcuts import BehaviourSpace, compute_behaviour_space_statistics
+from behaviour_planning_smt.shortcuts import BehaviourSpace, compute_behaviour_space_statistics
 
 
 # Create an enum for the different types of planning
