@@ -1,12 +1,8 @@
 # Behaviour Sorts Suite (BSS)
-This is the official implementation for [Behaviour Planning: A Toolkit for Diverse Planning]. 
 BSS contains three components:
 - Behaviour Space
 - Behaviour Features Library
 - Behaviour Count
-
-# Installation
-Installation is easy; just run `python setup.py install --user`
 
 # Constructing a behaviour space
 It is a discretisation for the solution space based on a set of features the domain modeller selects. In this package, we use planning-as-SMT to generate a plan and infer its behaviour. To construct a behaviour space, we define which features to include. Currently, we are providing three features:
@@ -17,7 +13,7 @@ However, those features can be easily extended by the user.
 
 ```
 from unified_planning.io import PDDLReader
-from bss.shortcuts import BehaviourSpace, GoalPredicatesOrdering, MakespanOptimalCostBound, ResourceCount
+from behaviour_planning_smt.shortcuts import BehaviourSpace, GoalPredicatesOrdering, MakespanOptimalCostBound, ResourceCount
 
 resources_file = <this file contains the required information for resources dimension,
 check the following section for syntax>
@@ -53,7 +49,7 @@ print(plan.behaviour)
 ## 2. Behaviour count
 Behaviour spaces can count the behaviours presented in a given plan set.
 ```
-from bss.shortcuts import BehaviourCount
+from behaviour_planning_smt.shortcuts import BehaviourCount
 planlist = [.. Set of plans read from sas plan files  ..]
 bspace = BehaviourCount(domain, problem, bspace_cfg, planlist)
 behaviour_count = bspace.count()

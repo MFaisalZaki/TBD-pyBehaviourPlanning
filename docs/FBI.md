@@ -1,16 +1,5 @@
-# pyForbidBehaviourIterative
-TODO
-
-# Build
-
-```
-# mkdir -p bplanning/v-env && cd bplanning/v-env && python3 -m venv . && source bin/activate && cd ..
-mkdir bplanning
-git clone https://github.com/MFaisalZaki/pyBehaviourSortsSuite.git
-cd pyBehaviourSortsSuite && python3 setup.py install --user && cd ..
-git clone https://github.com/MFaisalZaki/pyForbidBehaviourIterative.git
-cd pyForbidBehaviourIterative && python3 setup.py install --user && cd ..
-```
+# Forbid Behaviour Iterative (FBI)
+Forbid behaviour iterative is a diverse planning approach that uses behaviour spaces to generate diverse plans. FBI generates diverse plans by forbiding behaviours.
 
 # How to use
 ## 1. CLI
@@ -22,7 +11,7 @@ usage: bplanningcli [-h] [-k K] [-q Q] [--add-goal-ordering] [--add-resource-cou
 - `q`: quality bound factor.
 - `--add-goal-ordering`: flag to add goal predicate ordering dimension.
 - `--add-resource-count`: flag to add resource count dimension.
-- `--resource-file`: file containing the additional information for the resource utilisation (syntax can be found in [BSS](https://github.com/MFaisalZaki/pyBehaviourSortsSuite.git)).
+- `--resource-file`: file containing the additional information for the resource utilisation (syntax can be found in [BSS](https://github.com/MFaisalZaki/pySMTBehaviourPlanning/blob/main/docs/BSS.md)).
 - `--add-makespan`: flag to add the makespan optimal dimension.
 - `--disable-action-check`: flag to allow steps with no actions.
 - `plannercfg`: planner configuration json file with the following structure
@@ -47,8 +36,8 @@ planner_params = {
 ## 2. API interface
 ```
 from unified_planning.io import PDDLReader
-from bss.shortcuts import GoalPredicatesOrdering, MakespanOptimalCostBound, ResourceCount
-from fbi.shortcuts import *
+from behaviour_planning_smt.shortcuts import GoalPredicatesOrdering, MakespanOptimalCostBound, ResourceCount
+from behaviour_planning_smt.shortcuts import ForbidBehaviourIterative, PlanningType
 
 # 1. Construct the planner's parameters:
 # - define the behaviour space's dimensions 
@@ -88,8 +77,8 @@ else: fbi.plan()
 ```
 from unified_planning.io import PDDLReader
 from unified_planning.shortcuts import OneshotPlanner
-from bss.shortcuts import GoalPredicatesOrdering, MakespanOptimalCostBound, ResourceCount
-from fbi.shortcuts import *
+from behaviour_planning_smt.shortcuts import GoalPredicatesOrdering, MakespanOptimalCostBound, ResourceCount
+from behaviour_planning_smt.shortcuts import ForbidBehaviourIterative, PlanningType
 
 # ... define the planner_params
 # ... define the planning task
