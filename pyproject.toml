@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "behaviour-planning-smt"
+name = "behaviour-planning"
 version = "0.1.0"
 description = "Behaviour planning over Domain Models using SMT solvers"
 authors = ["MFaisalZaki <mustafa.faisal.eng@gmail.com>"]
