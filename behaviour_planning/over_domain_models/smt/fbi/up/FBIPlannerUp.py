@@ -4,7 +4,7 @@ import unified_planning as up
 from unified_planning.engines.results import PlanGenerationResultStatus as ResultStatus
 from unified_planning.engines.results import PlanGenerationResult
 
-from behaviour_planning_smt.fbi.planner.planner import ForbidBehaviourIterative
+from behaviour_planning.over_domain_models.smt.fbi.planner.planner import ForbidBehaviourIterative
 
 # We have to args: linear, upper_bound
 class FBIPlanner(up.engines.Engine, up.engines.mixins.OneshotPlannerMixin):

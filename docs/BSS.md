@@ -13,7 +13,7 @@ However, those features can be easily extended by the user.
 
 ```
 from unified_planning.io import PDDLReader
-from behaviour_planning_smt.shortcuts import BehaviourSpace, GoalPredicatesOrdering, MakespanOptimalCostBound, ResourceCount
+from behaviour_planning.over_domain_models.smt.shortcuts import BehaviourSpace, GoalPredicatesOrdering, MakespanOptimalCostBound, ResourceCount
 
 resources_file = <this file contains the required information for resources dimension,
 check the following section for syntax>
@@ -49,7 +49,7 @@ print(plan.behaviour)
 ## 2. Behaviour count
 Behaviour spaces can count the behaviours presented in a given plan set.
 ```
-from behaviour_planning_smt.shortcuts import BehaviourCount
+from behaviour_planning.over_domain_models.smt.shortcuts import BehaviourCount
 planlist = [.. Set of plans read from sas plan files  ..]
 bspace = BehaviourCount(domain, problem, bspace_cfg, planlist)
 behaviour_count = bspace.count()

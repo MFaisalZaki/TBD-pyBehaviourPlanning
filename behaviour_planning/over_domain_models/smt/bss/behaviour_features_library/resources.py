@@ -3,7 +3,7 @@ import os
 from lark import Lark, Transformer, v_args
 import z3
 
-from behaviour_planning_smt.bss.behaviour_features_library.base import DimensionConstructor
+from behaviour_planning.over_domain_models.smt.bss.behaviour_features_library.base import DimensionConstructor
 
 class Resources(DimensionConstructor):
     def __init__(self, name, encoder, additional_information):

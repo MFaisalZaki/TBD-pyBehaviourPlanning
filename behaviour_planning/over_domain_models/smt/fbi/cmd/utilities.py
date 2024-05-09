@@ -1,8 +1,6 @@
 import json
 
-
-
-from behaviour_planning_smt.shortcuts import GoalPredicatesOrdering, MakespanOptimalCostBound, ResourceCount
+from behaviour_planning.over_domain_models.smt.shortcuts import GoalPredicatesOrdering, MakespanOptimalCostBound, ResourceCount
 
 def process_args(args):
 

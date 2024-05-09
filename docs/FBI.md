@@ -36,8 +36,8 @@ planner_params = {
 ## 2. API interface
 ```
 from unified_planning.io import PDDLReader
-from behaviour_planning_smt.shortcuts import GoalPredicatesOrdering, MakespanOptimalCostBound, ResourceCount
-from behaviour_planning_smt.shortcuts import ForbidBehaviourIterative, PlanningType
+from behaviour_planning.over_domain_models.smt.shortcuts import GoalPredicatesOrdering, MakespanOptimalCostBound, ResourceCount
+from behaviour_planning.over_domain_models.smt.shortcuts import ForbidBehaviourIterative, PlanningType
 
 # 1. Construct the planner's parameters:
 # - define the behaviour space's dimensions 
@@ -77,8 +77,8 @@ else: fbi.plan()
 ```
 from unified_planning.io import PDDLReader
 from unified_planning.shortcuts import OneshotPlanner
-from behaviour_planning_smt.shortcuts import GoalPredicatesOrdering, MakespanOptimalCostBound, ResourceCount
-from behaviour_planning_smt.shortcuts import ForbidBehaviourIterative, PlanningType
+from behaviour_planning.over_domain_models.smt.shortcuts import GoalPredicatesOrdering, MakespanOptimalCostBound, ResourceCount
+from behaviour_planning.over_domain_models.smt.shortcuts import ForbidBehaviourIterative, PlanningType
 
 # ... define the planner_params
 # ... define the planning task

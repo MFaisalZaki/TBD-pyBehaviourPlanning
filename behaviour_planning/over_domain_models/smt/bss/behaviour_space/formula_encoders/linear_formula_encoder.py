@@ -12,9 +12,9 @@ import z3
 from unified_planning.plans import SequentialPlan
 from unified_planning.plans import ActionInstance
 
-from behaviour_planning_smt.bss.behaviour_space.formula_encoders.utilities import str_repr
+from behaviour_planning.over_domain_models.smt.bss.behaviour_space.formula_encoders.utilities import str_repr
 
-from behaviour_planning_smt.bss.behaviour_space.formula_encoders.smt_sequential_plan import SMTSequentialPlan
+from behaviour_planning.over_domain_models.smt.bss.behaviour_space.formula_encoders.smt_sequential_plan import SMTSequentialPlan
 
 class EncoderGrounded:
     def __init__(self, name, task):

@@ -4,7 +4,7 @@ import os
 
 from unified_planning.io import PDDLReader
 
-from behaviour_planning_smt.fbi.planner.planner import ForbidBehaviourIterative
+from behaviour_planning.over_domain_models.smt.fbi.planner.planner import ForbidBehaviourIterative
 from .argparser import create_parser
 from .utilities import process_args
 

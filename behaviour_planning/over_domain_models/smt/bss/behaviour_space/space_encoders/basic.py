@@ -5,10 +5,10 @@ from z3 import *
 
 from unified_planning.plans import SequentialPlan
 
-from behaviour_planning_smt.bss.behaviour_space.formula_encoders.linear_formula_encoder import EncoderSequential
-from behaviour_planning_smt.bss.behaviour_space.formula_encoders.smt_sequential_plan import SMTSequentialPlan
+from behaviour_planning.over_domain_models.smt.bss.behaviour_space.formula_encoders.linear_formula_encoder import EncoderSequential
+from behaviour_planning.over_domain_models.smt.bss.behaviour_space.formula_encoders.smt_sequential_plan import SMTSequentialPlan
 
-from behaviour_planning_smt.bss.behaviour_features_library.makespan_optimal_cost_bound import MakespanOptimalCostBound
+from behaviour_planning.over_domain_models.smt.bss.behaviour_features_library.makespan_optimal_cost_bound import MakespanOptimalCostBound
 
 class BehaviourSpace:
     def __init__(self, task, cfg=defaultdict(dict)) -> None:

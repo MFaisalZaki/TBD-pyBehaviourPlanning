@@ -1,6 +1,6 @@
 from unified_planning.io import PDDLReader
 
-from behaviour_planning_smt.bss.behaviour_space.space_encoders.basic import BehaviourSpace
+from behaviour_planning.over_domain_models.smt.bss.behaviour_space.space_encoders.basic import BehaviourSpace
 
 class BehaviourCount:
     def __init__(self, domain, problem, bspace_cfg, planlist):
