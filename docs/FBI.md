@@ -4,7 +4,7 @@ Forbid behaviour iterative is a diverse planning approach that uses behaviour sp
 # How to use
 ## 1. CLI
 ```
-usage: bplanningcli [-h] [-k K] [-q Q] [--add-goal-ordering] [--add-resource-count] [--resource-file RESOURCE_FILE] [--add-makespan] [--disable-action-check] [--dump-dir DUMP_DIR] plannercfg domain problem.pddl
+usage: pybehaviourplanning_domain_models [-h] [-k K] [-q Q] [--add-goal-ordering] [--add-resource-count] [--resource-file RESOURCE_FILE] [--add-makespan] [--disable-action-check] [--dump-dir DUMP_DIR] plannercfg domain problem.pddl
 ```
 
 - `k`: required number of plans to generate.

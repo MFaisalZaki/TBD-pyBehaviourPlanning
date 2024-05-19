@@ -18,3 +18,6 @@ pypmt = {git = "https://github.com/pyPMT/pyPMT.git"}
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+pybehaviourplanning_domain_models = 'behaviour_planning.over_domain_models.smt.fbi.cmd.bplanningcli:main'
