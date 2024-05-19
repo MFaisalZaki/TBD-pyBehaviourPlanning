@@ -3,17 +3,17 @@ name = "behaviour-planning"
 version = "0.1.0"
 description = "Behaviour planning over Domain Models using SMT solvers"
 authors = ["MFaisalZaki <mustafa.faisal.eng@gmail.com>"]
+license = "MIT"
 readme = "README.md"
 
 [tool.poetry.dependencies]
 python = "^3.10"
-up-fast-downward = "^0.4.1"
-up-pyperplan = "^1.1.0"
 up-symk = "^1.3.0"
-unified-planning = "^1.1.0"
 z3-solver = "^4.13.0.0"
 lark = "^1.1.9"
 numpy = "1.26.4"
+pypmt = {git = "https://github.com/pyPMT/pyPMT.git"}
+
 
 [build-system]
 requires = ["poetry-core"]
