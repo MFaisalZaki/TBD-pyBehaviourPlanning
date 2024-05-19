@@ -8,7 +8,6 @@ from unified_planning.plans import SequentialPlan
 from unified_planning.plans import ActionInstance
 
 from pypmt.encoders.basic import EncoderSequential
-from pypmt.modifiers.modifierLinear import LinearModifier
 from pypmt.encoders.utilities import str_repr
 
 from behaviour_planning.over_domain_models.smt.bss.behaviour_space.formula_encoders.smt_sequential_plan import SMTSequentialPlan
@@ -93,8 +92,8 @@ def encode(self, formula_length):
         self.assertions.append(execution_semantics)
     
     # Encode possible goal states.
-        self.assertions.append(z3.PbGe([(g,1) for g in self.goal_states], 1))
-        return self.assertions
+    self.assertions.append(z3.PbGe([(g,1) for g in self.goal_states], 1))
+    return self.assertions
 
 def get_actions_vars(self, step):
     return list(map(lambda x: x[step], self.up_actions_to_z3.values()))
@@ -117,11 +116,11 @@ def extract_plan(self, model, horizon):
     for t in range(0, horizon+1):
         for action in self:
             if z3.is_true(model[self.up_actions_to_z3[action.name][t]]):
-                    plan.actions.append(ActionInstance(action))
-                    selected_actions_vars.append(self.up_actions_to_z3[action.name][t])
-                    actions_sequence.append(self.action_name_to_number[action.name])
-                    break
-    
+                plan.actions.append(ActionInstance(action))
+                selected_actions_vars.append(self.up_actions_to_z3[action.name][t])
+                actions_sequence.append(self.action_name_to_number[action.name])
+                break
+
     for compilation_r in reversed(self.compilation_results):
         plan = plan.replace_action_instances(compilation_r.map_back_action_instance)
 
