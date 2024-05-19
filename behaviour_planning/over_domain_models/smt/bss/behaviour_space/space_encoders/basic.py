@@ -80,7 +80,7 @@ class BehaviourSpace:
         self._plans.append(plan)
 
         if not is_plan_valid:
-            self.log_msg.append(f'Plan {plan.id} is invalid. Reason: {plan.reason}')
+            self.log_msg.append(f'Plan {plan.id} is invalid. Reason: {plan.validation_fail_reason}')
             return None
         return plan
 
